@@ -13,6 +13,7 @@
             border-radius: 15px;
             font-family: Lato;
             padding: .7em;
+            overflow: hidden;
             display: flex;
             flex-direction: column-reverse;
 
@@ -98,8 +99,8 @@
 
 
         #arrow {
-            width: 280px !important;
-            font-size: 280px;
+            width: 300px !important;
+            font-size: 300px;
             color: hsl(0, 0%, 13%);
             transition: all 200ms ease-in-out;
         }
@@ -157,7 +158,7 @@
                 font-size: 500px;
                 color: #F8F4EC;
                 right: -250px;
-                bottom: 0px;
+                bottom: -70px;
                 position: absolute;
             }
         }
@@ -430,5 +431,12 @@
 
     #shirt {
         max-width: 400px;
+        bottom: -90px;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    #shirt {
+        bottom: -70px !important;
     }
 }
