@@ -27,7 +27,6 @@ export default function Home() {
             <FontAwesomeIcon
               className={styles.arrow}
               id={styles.arrow}
-              width={15}
               icon={faArrowRight}
             />
           </Link>
@@ -39,7 +38,6 @@ export default function Home() {
             </div>
             <FontAwesomeIcon
               icon={faShirt}
-              width={500}
               className={styles.shirt}
               id={styles.shirt}
             />
