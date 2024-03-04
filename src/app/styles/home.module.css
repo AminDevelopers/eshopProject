@@ -381,6 +381,12 @@
     }
 }
 
+@media screen and (min-width: 920px) {
+    #arrow {
+        padding-bottom: .1em !important;
+    }
+}
+
 @media screen and (max-width: 810px) {
     #card1:hover #arrow {
         transform: translateX(450px) !important;
