@@ -6,9 +6,9 @@ import styles from "../styles/Footer.module.css";
 export default function Footer() {
   const links = [
     { id: 1, path: "/", name: "home" },
-    { id: 1, path: "/shop", name: "shop" },
-    { id: 1, path: "/login", name: "login" },
-    { id: 1, path: "/team", name: "team" },
+    { id: 2, path: "/shop", name: "shop" },
+    { id: 3, path: "/login", name: "login" },
+    { id: 4, path: "/team", name: "team" },
   ];
   const pathname = usePathname();
   return (

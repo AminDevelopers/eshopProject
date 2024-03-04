@@ -99,6 +99,7 @@
 
         #arrow {
             width: 280px !important;
+            font-size: 280px;
             color: hsl(0, 0%, 13%);
             transition: all 200ms ease-in-out;
         }
@@ -153,6 +154,7 @@
 
             .shirt {
                 width: 500px;
+                font-size: 500px;
                 color: #F8F4EC;
                 right: -250px;
                 bottom: 0px;
