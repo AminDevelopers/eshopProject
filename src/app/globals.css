@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(151, 75%, 58%);
+}
+
+::-webkit-scrollbar-track {
+    background-color: hsl(270, 13%, 6%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background-color: hsl(270, 13%, 6%);
+    /* background-color: white; */
+    min-height: 100vh;
+}
