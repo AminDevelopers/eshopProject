@@ -57,11 +57,11 @@
 
 @media screen and (max-width: 850px) {
     .inputsignup {
-        font-size: 2rem !important;
+        font-size: 1.3rem !important;
     }
 
     .signuplogintitle {
-        font-size: 2rem !important;
+        font-size: 1.8rem !important;
     }
 }
 
