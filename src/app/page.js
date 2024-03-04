@@ -26,6 +26,7 @@ export default function Home() {
             </div>
             <FontAwesomeIcon
               className={styles.arrow}
+              id={styles.arrow}
               width={15}
               icon={faArrowRight}
             />

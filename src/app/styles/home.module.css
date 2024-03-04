@@ -415,7 +415,7 @@
         row-gap: 2em;
     }
 
-    #card1 .arrow {
+    #card1 #arrow {
         max-width: 200px !important;
     }
 
