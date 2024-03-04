@@ -97,7 +97,7 @@
 
 
 
-        .arrow {
+        #arrow {
             width: 280px;
             color: hsl(0, 0%, 13%);
             transition: all 200ms ease-in-out;
@@ -107,7 +107,7 @@
             cursor: pointer;
         }
 
-        .card:hover .arrow {
+        .card:hover #arrow {
             transform: translateX(100px);
             transition: all 130ms ease-in-out;
         }
@@ -339,7 +339,7 @@
         grid-row: 1 / 2;
     }
 
-    #card1:hover .arrow {
+    #card1:hover #arrow {
         transform: translateX(500px) !important;
     }
 
@@ -379,19 +379,19 @@
 }
 
 @media screen and (max-width: 810px) {
-    #card1:hover .arrow {
+    #card1:hover #arrow {
         transform: translateX(450px) !important;
     }
 }
 
 @media screen and (max-width: 775px) {
-    #card1:hover .arrow {
+    #card1:hover #arrow {
         transform: translateX(200px) !important;
     }
 }
 
 @media screen and (max-width: 650px) {
-    #card1:hover .arrow {
+    #card1:hover #arrow {
         transform: translateX(300px) !important;
     }
 }
