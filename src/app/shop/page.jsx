@@ -1,4 +1,4 @@
-export default async function shop() {
+export default async function Shop() {
   return (
     <div>
       <h1>this is shop</h1>

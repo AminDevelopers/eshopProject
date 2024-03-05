@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/signup.module.css";
 
-export default function signup() {
+export default function SignUp() {
   return (
     <div className={styles.signup}>
       <div className={styles.signupcontainer}>
