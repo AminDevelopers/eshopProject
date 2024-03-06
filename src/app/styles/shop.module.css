@@ -54,9 +54,9 @@
         .shopButtonArrow {
             color: hsl(300, 2%, 91%);
             background-color: black;
-            border-radius: 50%;
-            padding: .3em;
             width: 20px;
+            border-radius: 50%;
+            padding: .2em .15em;
         }
     }
 }

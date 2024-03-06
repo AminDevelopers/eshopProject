@@ -44,10 +44,29 @@
             }
         }
     }
+
+}
+
+.hamburger {
+    display: flex;
+    justify-content: right;
+    padding: .5em;
+
+    .hamburgerIcon {
+        color: hsl(151, 75%, 58%);
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 521px) {
+
     .ul {
         display: none !important;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    .hamburger {
+        display: none;
     }
 }

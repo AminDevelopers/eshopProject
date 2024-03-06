@@ -1,3 +1,5 @@
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import styles from "../styles/navbar.module.css";
@@ -7,6 +9,12 @@ export default function Navbar() {
 
   return (
     <div className="NavBar">
+      <div className={styles.hamburger}>
+        <FontAwesomeIcon
+          className={styles.hamburgerIcon}
+          icon={faBars}
+        ></FontAwesomeIcon>
+      </div>
       <nav className={styles.navbar}>
         <ul className={styles.ul}>
           <Link href={"/shop"} className={styles.link}>
