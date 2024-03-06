@@ -3,14 +3,18 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   users: [
     {
-      username: "souki",
-      password: "soukaina1234",
+      username: "username",
+      password: "password",
     },
     {
       username: "amin",
       password: "password",
     },
   ],
+  form: {
+    username: "",
+    password: "",
+  },
   userLogged: "guest",
   isLogged: false,
 };
@@ -30,8 +34,34 @@ const authSlice = createSlice({
         alert("incorrect");
       }
     },
+    inscription: (state, action) => {
+      const userExist = state.users.some(
+        (user) => user.username === action.payload.username
+      );
+
+      const { username, password } = action.payload;
+
+      if (!username || !password) {
+        alert("please enter both username and password.");
+        return;
+      }
+
+      if (!userExist) {
+        state.users.push(action.payload);
+        alert(`User added successfully !`);
+      } else {
+        alert(`This username is already taken. Try again !`);
+      }
+    },
+    setUsername: (state, action) => {
+      state.form.username = action.payload;
+    },
+    setPassword: (state, action) => {
+      state.form.password = action.payload;
+    },
   },
 });
 
-export const { logIn } = authSlice.actions;
+export const { logIn, inscription, setUsername, setPassword } =
+  authSlice.actions;
 export default authSlice.reducer;
