@@ -59,9 +59,14 @@ const authSlice = createSlice({
     setPassword: (state, action) => {
       state.form.password = action.payload;
     },
+
+    disconnect: (state) => {
+      state.isLogged = false;
+      state.userLogged = "Guest";
+    },
   },
 });
 
-export const { logIn, inscription, setUsername, setPassword } =
+export const { logIn, inscription, setUsername, setPassword, disconnect } =
   authSlice.actions;
 export default authSlice.reducer;

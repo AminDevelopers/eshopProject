@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { useSelector } from "react-redux";
 import styles from "../styles/navbar.module.css";
+
 export default function Navbar() {
+  const { isLogged, userLogged } = useSelector((state) => state.auth);
+
   return (
     <div className="NavBar">
       <nav className={styles.navbar}>
@@ -13,9 +17,15 @@ export default function Navbar() {
               home
             </Link>
           </div>
-          <Link href={"/login"} className={styles.link}>
-            login
-          </Link>
+          {isLogged ? (
+            <Link href={"/login"} className={styles.link}>
+              {userLogged}
+            </Link>
+          ) : (
+            <Link href={"/login"} className={styles.link}>
+              login
+            </Link>
+          )}
         </ul>
       </nav>
     </div>
