@@ -1,0 +1,62 @@
+.shopInfo {
+    padding: .5em;
+    margin-top: 1.5em;
+
+    .shopTitle {
+        color: hsl(300, 2%, 91%);
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .shopTextDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Lato;
+        margin-bottom: 0;
+
+        .shopText {
+            text-align: center;
+            font-family: Lato;
+            text-transform: capitalize;
+            max-width: 600px;
+            color: hsl(240, 0%, 43%);
+            margin-top: 0;
+        }
+    }
+
+    .shopFav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Lato;
+
+        .shopFavButton {
+            color: black;
+            background-color: hsl(151, 75%, 58%);
+            padding: .5em .8em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: 600;
+            column-gap: .5em;
+            border-radius: 15px;
+            margin-top: .5em;
+        }
+
+        .shopFavButton:hover {
+            background-color: hsla(151, 75%, 58%, 0.712);
+            cursor: pointer;
+        }
+
+        .shopButtonArrow {
+            color: hsl(300, 2%, 91%);
+            background-color: black;
+            border-radius: 50%;
+            padding: .3em;
+            width: 20px;
+        }
+    }
+}

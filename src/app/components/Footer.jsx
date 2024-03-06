@@ -24,7 +24,7 @@ export default function Footer() {
             <p>useful links</p>
             <div className={styles.linkstxt}>
               {links.map((link) => {
-                const isActive = pathname.startsWith(link.path);
+                const isActive = pathname == link.path;
                 return (
                   <Link
                     key={link.id}

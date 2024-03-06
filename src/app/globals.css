@@ -25,6 +25,7 @@ body,
 html {
     padding: 0;
     margin: 0;
+    font-family: Lato;
     background-color: hsl(270, 13%, 6%);
     /* background-color: white; */
     min-height: 100vh;
