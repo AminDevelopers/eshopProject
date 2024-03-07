@@ -60,3 +60,137 @@
         }
     }
 }
+
+.filtercontainer {
+    display: flex;
+    align-items: center;
+    margin-top: 6em;
+    flex-direction: column;
+
+    .filterby {
+        color: white;
+        font-family: Lato;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: .5em;
+
+    .pricing {
+        accent-color: hsl(151, 75%, 58%);
+    }
+
+    .flexprice {
+        display: flex;
+        align-items: center;
+        column-gap: .5em;
+    }
+
+    .search {
+        padding: .5em;
+        font-family: Lato;
+        font-weight: 600;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+    }
+}
+
+.cards {
+    display: grid;
+    padding: .5em;
+    margin-block: 9em;
+    column-gap: 1.5em;
+    row-gap: 6em;
+    grid-template-columns: repeat(4, 1fr);
+
+    .card {
+        padding: .5em;
+        background-color: hsla(0, 0%, 43%, 0.338);
+        border-radius: 15px;
+
+        .img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .cardContent {
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .cardTitle {
+                color: white;
+                white-space: nowrap;
+                text-align: center;
+                font-size: 1rem;
+                text-transform: capitalize;
+                white-space: balance;
+            }
+
+            .cardText {
+                color: hsl(240, 0%, 43%);
+                text-transform: capitalize;
+                font-weight: 400;
+                font-size: .9rem;
+                white-space: balance;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .cardPrice {
+                color: hsl(151, 75%, 58%);
+                white-space: nowrap;
+                font-size: 1rem;
+                text-transform: capitalize;
+                white-space: balance;
+            }
+
+            .add {
+                color: hsl(151, 75%, 58%);
+                white-space: nowrap;
+                font-size: 1rem;
+                text-transform: capitalize;
+                white-space: balance;
+            }
+
+            .add:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1460px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .filters {
+        flex-direction: column;
+        row-gap: 1.4em;
+    }
+}

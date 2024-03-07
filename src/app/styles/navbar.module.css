@@ -50,11 +50,13 @@
 .hamburger {
     display: flex;
     justify-content: right;
-    padding: .5em;
+    padding: 1em .5em;
+    z-index: 999;
 
     .hamburgerIcon {
         color: hsl(151, 75%, 58%);
-        font-size: 25px;
+        font-size: 30px;
+        cursor: pointer;
     }
 }
 
