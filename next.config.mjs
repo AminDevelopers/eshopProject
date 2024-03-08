@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "placeimg.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
+        port: "",
+      },
     ],
   },
 };

@@ -1,0 +1,38 @@
+.favContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-content: center;
+    place-items: center;
+
+    .card {
+        margin-block: 6em;
+
+        .img {
+            object-fit: cover;
+        }
+
+        .cardTitle {
+            color: hsl(300, 3%, 93%);
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .cardPrice {
+            color: hsl(151, 75%, 58%);
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .favContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .favContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
