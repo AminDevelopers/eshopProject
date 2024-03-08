@@ -1,9 +1,11 @@
 "use client";
+import { addToFavorites } from "@/lib/features/favSlice";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import styles from "../styles/shop.module.css";
 
 export default function Shop() {
@@ -15,7 +17,7 @@ export default function Shop() {
     const recupData = async () => {
       try {
         const response = await fetch(
-          "https://api.escuelajs.co/api/v1/products"
+          "https://api.escuelajs.co/api/v1/products/"
         );
         const reponseData = await response.json();
         setData(reponseData);
@@ -32,6 +34,12 @@ export default function Shop() {
       element.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const dispatch = useDispatch();
+
+  const handleAddToFavorites = (item) => {
+    dispatch(addToFavorites(item));
+  };
+
   return (
     <div className={styles.shop}>
       <div className={styles.shopInfo}>
@@ -46,7 +54,7 @@ export default function Shop() {
         </div>
         <div className={styles.shopFav}>
           <Link href={"/shop/favorites"} className={styles.shopFavButton}>
-            Your favorites{" "}
+            Your favorites
             <FontAwesomeIcon
               className={styles.shopButtonArrow}
               icon={faArrowRight}
@@ -104,7 +112,12 @@ export default function Shop() {
               </div>
               <div className={styles.buttons}>
                 <h2 className={styles.cardPrice}> ${element.price} </h2>
-                <h2 className={styles.add}>add</h2>
+                <h2
+                  onClick={() => handleAddToFavorites(element)}
+                  className={styles.add}
+                >
+                  add
+                </h2>
               </div>
             </div>
           );
