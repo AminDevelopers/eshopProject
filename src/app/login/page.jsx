@@ -14,7 +14,7 @@ export default function Login() {
 
   useEffect(() => {
     localStorage.setItem("isLogged", JSON.stringify(isLogged));
-    localStorage.setItem("useLogged", userLogged);
+    localStorage.setItem("userLogged", userLogged);
   }, [isLogged, userLogged]);
 
   const handleLogin = () => {
