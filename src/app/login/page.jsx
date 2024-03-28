@@ -2,7 +2,7 @@
 "use client";
 import { disconnect, logIn } from "@/lib/features/authSlice";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../styles/login.module.css";
 
@@ -11,16 +11,6 @@ export default function Login() {
   const dispatch = useDispatch();
   const name = useRef();
   const password = useRef();
-
-  useEffect(() => {
-    const storedIsLogged = JSON.parse(localStorage.getItem("isLogged"));
-    const storedUserLogged = localStorage.getItem("userLogged");
-    const storedPassword = localStorage.getItem("password");
-
-    if (storedIsLogged && storedUserLogged && storedPassword) {
-      dispatch(logIn({ username: storedUserLogged, password: storedPassword }));
-    }
-  }, []);
 
   const handleLogin = () => {
     const user = {
