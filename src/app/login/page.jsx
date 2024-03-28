@@ -13,9 +13,14 @@ export default function Login() {
   const password = useRef();
 
   useEffect(() => {
-    localStorage.setItem("isLogged", JSON.stringify(isLogged));
-    localStorage.setItem("userLogged", userLogged);
-  }, [isLogged, userLogged]);
+    const storedIsLogged = JSON.parse(localStorage.getItem("isLogged"));
+    const storedUserLogged = localStorage.getItem("userLogged");
+    const storedPassword = localStorage.getItem("password");
+
+    if (storedIsLogged && storedUserLogged && storedPassword) {
+      dispatch(logIn({ username: storedUserLogged, password: storedPassword }));
+    }
+  }, []);
 
   const handleLogin = () => {
     const user = {
