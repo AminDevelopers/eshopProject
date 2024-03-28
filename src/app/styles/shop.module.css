@@ -141,6 +141,7 @@
                 color: hsl(240, 0%, 43%);
                 text-transform: capitalize;
                 font-weight: 400;
+                height: 10em;
                 font-size: .9rem;
                 white-space: balance;
             }
