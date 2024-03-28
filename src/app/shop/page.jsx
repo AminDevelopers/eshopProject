@@ -2,7 +2,6 @@
 import { addToFavorites } from "@/lib/features/favSlice";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
@@ -99,7 +98,7 @@ export default function Shop() {
         {filteredData.map((element) => {
           return (
             <div key={element.id} className={styles.card}>
-              <Image
+              <img
                 width={350}
                 height={350}
                 className={styles.img}
