@@ -3,6 +3,7 @@
     grid-template-columns: repeat(4, 1fr);
     place-content: center;
     place-items: center;
+    padding: .5em;
 
     .card {
         margin-block: 6em;

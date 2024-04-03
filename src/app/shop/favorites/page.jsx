@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useSelector } from "react-redux";
 import styles from "../../styles/fav.module.css";
 
@@ -22,7 +21,7 @@ export default function Favorites() {
           return (
             <>
               <div key={element.id} className={styles.card}>
-                <Image
+                <img
                   width={350}
                   height={350}
                   className={styles.img}
